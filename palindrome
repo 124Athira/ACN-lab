@@ -1,0 +1,18 @@
+PROGRAM:
+echo Enter the string
+read s
+echo $s>temp
+rvs="$(rev temp)"
+if [ $s = $rvs ]
+then
+echo "it is palindrome"
+else
+echo " it is not a Palindrome"
+fi
+
+OUTPUT:
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ chmod +x palin.sh
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ ./palin.sh
+Enter the string
+malayalam
+it is palindrome
