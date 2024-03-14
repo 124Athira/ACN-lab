@@ -1,0 +1,13 @@
+PROGRAM:
+read num
+reverse=$(echo "$num" | rev)
+if [ "$num" -eq "$reverse" ]; then
+echo "$num is same when reversed."
+else
+echo "$num is not same when reversed."
+fi
+
+OUTPUT:
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ chmod +x rev.sh
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ ./rev.sh
+ is not same when reversed.ger expression expected
