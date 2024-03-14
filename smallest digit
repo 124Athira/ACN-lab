@@ -1,0 +1,24 @@
+echo "Enter a number:"
+read number
+smallest=${number:0:1}
+for (( i=1; i<${#number}; i++ )); do
+digit=${number:i:1}
+if (( digit < smallest )); then
+smallest=$digit
+fi
+done
+echo "Smallest digit: $smallest"
+
+
+
+
+
+
+
+
+
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ chmod +x smallest.sh
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ ./smallest.sh
+Enter a number:
+12345
+Smallest digit: 1
