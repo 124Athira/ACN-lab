@@ -1,0 +1,29 @@
+#!/bin/bash
+echo "enter file name1"
+read f1
+echo "enter filename2"
+read f2
+if test -e $f1 -a -e $f2
+then
+cat $f1 $f2 >f3
+echo “File is:”
+cat f3
+else
+echo "file not found"
+fi
+
+mlm@mlm-H81:~/Desktop/Athira$ chmod +x concatfiles.sh
+mlm@mlm-H81:~/Desktop/Athira$ ./concatfiles.sh
+enter file name1
+f1
+enter filename2
+f2
+“File is:”
+a
+b
+c
+d
+1
+2
+3
+4
