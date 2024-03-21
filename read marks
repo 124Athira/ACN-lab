@@ -1,0 +1,53 @@
+#!/bin/bash
+echo -n "enter the limit:"
+read n
+for((i=0;i<n;i++))
+do
+echo -n "enter the rollno:"
+read rn
+echo -n "enter the name:"
+read name
+echo -n "enter the marks:"
+read m1 m2 m3
+total=`expr $m1 + $m2 + $m3`
+per=`expr "$total*100/300"|bc`
+echo "MARK LIST"
+echo "--------------"
+echo "RollNo:$rn"
+echo "Name:$name"
+echo "Total:$total"
+if [ $per -le 100 -a $per -ge 80 ]
+then
+echo "A grade"
+elif [ $per -le 79 -a $per -ge 70 ]
+then
+echo "B grade"
+elif [ $per -le 69 -a $per -ge 60 ]
+then
+echo "C grade"
+else
+echo "FAILED"
+fi
+done
+
+mlm@mlm-H81:~/Desktop/Athira$ chmod +x marks.sh
+mlm@mlm-H81:~/Desktop/Athira$ ./marks.sh
+enter the limit:2
+enter the rollno:1
+enter the name:Athira
+enter the marks:56 78 55
+MARK LIST
+--------------
+RollNo:1
+Name:Athira
+Total:189
+C grade
+enter the rollno:2
+enter the name:Anjana
+enter the marks:67 88 79
+MARK LIST
+--------------
+RollNo:2
+Name:Anjana
+Total:234
+B grade
