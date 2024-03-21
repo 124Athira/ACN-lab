@@ -1,0 +1,44 @@
+#!/bin/bash
+echo "Enter the two numbers"
+read x y
+a=$x
+b=$y
+echo " Using Temporary Variable"
+echo "Before swap"
+echo "x=$x"
+echo "y=$y"
+t=$y
+y=$x
+x=$t
+echo "After swap"
+echo "x=$x"
+echo "y=$y"
+echo " Without Using Temporary Variable"
+echo "Before swap"
+echo "x=$a"
+echo "y=$b"
+b=$((a+b))
+a=$((b-a))
+b=$((b-a))
+echo "After swap"
+echo "x=$a"
+echo "y=$b"
+
+mlm@mlm-H81:~/Desktop/Athira$ chmod +x swap.sh
+mlm@mlm-H81:~/Desktop/Athira$ ./swap.sh
+Enter the two numbers
+100 200
+ Using Temporary Variable
+Before swap
+x=100
+y=200
+After swap
+x=200
+y=100
+ Without Using Temporary Variable
+Before swap
+x=100
+y=200
+After swap
+x=200
+y=100
