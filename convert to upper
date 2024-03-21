@@ -1,0 +1,27 @@
+#!/bin/bash
+echo "enter the file name"
+read f1
+if test -e $f1
+then
+echo "contents of file"
+cat $f1
+echo "contents changed to uppercase"
+tr '[a-z]' '[A-Z]' <$f1
+else
+echo "file not found"
+fi
+
+mlm@mlm-H81:~/Desktop/Athira$ chmod +x conupper.sh
+mlm@mlm-H81:~/Desktop/Athira$ ./conupper.sh
+enter the file name
+f1
+contents of file
+a
+b
+c
+d
+contents changed to uppercase
+A
+B
+C
+D
