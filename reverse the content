@@ -1,0 +1,26 @@
+#!/bin/bash
+echo -n "Read a file:"
+read file
+if [ -e $file ]
+then
+echo "Content of $file"
+cat $file
+echo "Reversed content"
+tac $file
+else
+echo "File not existing"
+fi
+
+mlm@mlm-H81:~/Desktop/Athira$ chmod +x content.sh
+mlm@mlm-H81:~/Desktop/Athira$ ./content.sh
+Read a file:f1
+Content of f1
+a
+b
+c
+d
+Reversed content
+d
+c
+b
+a
