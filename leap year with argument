@@ -1,0 +1,22 @@
+#!/bin/bash
+yr=$1
+if [ $# -eq 0 ]
+then
+yr=`date +"%Y"`
+fi
+a=$(($yr % 4))
+b=$(($yr%100))
+c=$(($yr%400))
+if [ $a -eq 0 -a $b -ne 0 ]
+then
+echo "$yr is leap year"
+elif [ $c -eq 0 ]
+then
+echo "$yr is leap year "
+else
+echo "$yr is not a leap year"
+fi
+
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ chmod +x leapyr.sh
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ ./leapyr.sh
+2024 is leap year
