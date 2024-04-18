@@ -1,0 +1,14 @@
+echo "Enter directory path: "
+read directory
+num_files=$(find $directory -type f | wc -l)
+num_directories=$(find $directory -type d | wc -l)
+echo "Number of files: $num_files"
+echo "Number of directories: $num_directories"
+
+OUTPUT:
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ chmod +x countfiles.sh 
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ ./countfiles.sh 
+Enter directory path: 
+/home/mlm/Desktop
+Number of files: 49
+Number of directories: 3
