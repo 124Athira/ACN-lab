@@ -13,5 +13,13 @@ for name in "${!grades[@]}"; do
 echo "$name: ${grades[$name]}"
 done
 
+OUTPUT:
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ chmod +x displaygrades.sh 
+mlm@mlm-ThinkCentre-E73:~/Desktop/ACN$ ./displaygrades.sh 
+Charlie: 70%
+David: 60%
+Emma: 50%
+Alice: 90%
+Bob: 80%
 
   
